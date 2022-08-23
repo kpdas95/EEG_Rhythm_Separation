@@ -5,6 +5,7 @@ We have proposed a adaptive multivaraite EEG rhythm separation methodd based on 
 
 
 Please cite the following reference:
+
 [1] Kritiprasanna Das and Ram Bilas Pachori. "Schizophrenia detection technique using multivariate iterative filtering and multichannel EEG signals." Biomedical Signal Processing and Control 67 (2021): 102525.
 
 For any queries or help plese feel free to write a mail to kpdas95@gmail.com. I will be hapy to help. Any kind of suggestions is also most welcomed.
