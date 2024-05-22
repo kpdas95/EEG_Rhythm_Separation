@@ -4,17 +4,17 @@
 %####                                                 ####
 %#########################################################
 %
-% Mean frequeny based EEG rhythm separation
-% mIMF: contain the modes provided by multivariate iterative filtering.
-%       Each cell containg one particular MIMF corresponding to all
-%       channel. For example, cell (1,1) contains first or highest
-%       frequency MIMF. Each row of mIMF{1,ind_mimf} represent ind_mimf^th MIMF 
+% Mean frequency based EEG rhythm separation
+% mIMF: contains the modes provided by multivariate iterative filtering.
+%       Each cell contains one particular MIMF corresponding to all
+%       channels. For example, cell (1,1) contains the first or highest
+%       frequency MIMF. Each row of mIMF{1,ind_mimf} represents ind_mimf^th MIMF 
 %       corresponding to a particular channel. mIMF{1,5}(3,:)
 %       contains 5th MIMFs of channel 3.
 %
-% Fs:   is the smapling frequency.
+% Fs:   is the sampling frequency.
 %
-% eeg_rhy: containg the EEG rhythms, namely delta, theta, alpha, beta,
+% eeg_rhy: containing the EEG rhythms, namely delta, theta, alpha, beta,
 %          and gamma in eeg_rhy{1,1}, eeg_rhy{1,2}, eeg_rhy{1,3},
 %          eeg_rhy{1,4}, and eeg_rhy{1,5}, respectively. 
 %
@@ -26,7 +26,7 @@
 %       eeg_rhy = EEGRhythm(MIMF,Fs);
 %
 %
-% Please cite the following paper if are using this code or
+% Please cite the following paper if you are using this code or
 % part of the code:
 %
 % [1] Kritiprasanna Das and Ram Bilas Pachori. "Schizophrenia 
@@ -34,10 +34,13 @@
 % multichannel EEG signals." Biomedical Signal Processing and 
 % Control 67 (2021): 102525.
 %
+% [2] Kritiprasanna Das, Vivek Kumar Singh, and Ram Bilas Pachori.
+% "Introduction to EEG signal recording and processing." 
+% Artificial Intelligence Enabled Signal Processing based Models for
+% Neural Information Processing. CRC Press, 2024. 1-19.
 %
-%
-% For any queries or help plese feel free to write a mail to 
-% kpdas95@gmail.com. I will be hapy to help.
+% For any queries or help, please feel free to write an email to 
+% kpdas95@gmail.com. I will be happy to help.
 
 function [eeg_rhy]= EEGRhythm(mIMF,Fs)
 
@@ -61,7 +64,7 @@ for i=1:length(mf) % Select IMF belongs to band
     elseif (mf(i)>=8 && mf(i) <14)
         alpha_i=[alpha_i,i];
     elseif (mf(i)>=14 && mf(i) <30)
-        beta_i=[theta_i,i];
+        beta_i=[beta_i,i]; % Thanks Dhananjoy for the correction here
     elseif (mf(i)>=30 && mf(i) <95)
         gamma_i=[gamma_i,i];
     end
