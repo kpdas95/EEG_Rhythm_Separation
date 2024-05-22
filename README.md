@@ -12,7 +12,7 @@ Please cite the following reference:
 For any queries or help, please feel free to write an email to kpdas95@gmail.com. I will be happy to help. Any kind of suggestions is also most welcome.
 
 
-# Important you need to download and unzip code for MIF (https://github.com/kpdas95/MIF) on the working directory to use EEG rhythm separation code.
+# Important: you need to download and unzip the code for MIF (https://github.com/kpdas95/MIF) on the working directory to use the EEG rhythm separation code.
 
 
 
