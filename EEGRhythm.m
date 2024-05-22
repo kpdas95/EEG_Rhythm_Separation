@@ -64,7 +64,7 @@ for i=1:length(mf) % Select IMF belongs to band
     elseif (mf(i)>=8 && mf(i) <14)
         alpha_i=[alpha_i,i];
     elseif (mf(i)>=14 && mf(i) <30)
-        beta_i=[beta_i,i]; % Thanks Dhananjoy for the correction here
+        beta_i=[beta_i,i]; % Thanks Dhananjay for the correction here
     elseif (mf(i)>=30 && mf(i) <95)
         gamma_i=[gamma_i,i];
     end
